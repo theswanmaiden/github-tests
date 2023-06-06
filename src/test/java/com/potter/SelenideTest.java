@@ -12,13 +12,10 @@ import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.partialLinkText;
 
 public class SelenideTest {
-    @BeforeAll
-    static void beforeAll(){
-        open("https://github.com");
-    }
 
     @Test
     void findIssuesOnGithub(){
+        open("https://github.com");
         $("input[name='q']").setValue("theswanmaiden/github-tests").pressEnter();
         $(linkText("theswanmaiden/github-tests")).click();
         $(partialLinkText("Issues")).click();
