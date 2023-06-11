@@ -5,5 +5,7 @@ public class NewClass {
         int a;
         int b;
 
+        System.out.println("3 commit");
+
     }
 }
